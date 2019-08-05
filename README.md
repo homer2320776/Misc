@@ -1,1 +1,4 @@
-# Misc tools and scripts
+# Misc tools and scripts #
+
+* Bookmarklets
+	Amazon URL Shortner
