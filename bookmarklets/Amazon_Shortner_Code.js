@@ -1,7 +1,6 @@
 javascript: (function(x) {
-  var asin = x.getElementById('ASIN'),
-    url; {
-    url = 'https://amzn.com/' + asin.value;
-    prompt('Short Amazon URL (Press CTRL+C to copy):', url)
-  }
+	var asin = x.getElementById('ASIN');
+	var url = 'https://amzn.com/' + asin.value;
+	navigator.clipboard.writeText(url);
+	alert('Copied to clipboard\n'+url);
 }(document))
