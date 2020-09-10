@@ -1,7 +1,6 @@
 # Misc tools and scripts #
 
 ## Bookmarklets ##
-Links can be dragged and dropped directly if needed
 - [Amazon URL Shortner](https://raw.githubusercontent.com/homer2320776/Misc/master/bookmarklets/Amazon_Shortner_Bookmarklet.js) - 
 *Shortens with amzn.com*
 - [Food City Coupon Clipper](https://raw.githubusercontent.com/homer2320776/Misc/master/bookmarklets/FoodCity_Coupon_Clipper_Bookmarklet.js) - 
