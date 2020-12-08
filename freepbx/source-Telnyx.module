@@ -1,0 +1,39 @@
+<?php
+
+class Telnyx extends superfecta_base {
+
+    public $description = "Telnyx Phone number lookup API allows users to lookup phone number data.";
+    public $version_requirement = "1";
+    public $source_param = array(
+        'API_Key' => array(
+                'description' => 'API Key generated at https://portal.telnyx.com/#/app/api-keys',
+                'type' => 'textarea'
+        )
+    );
+
+    function get_caller_id($thenumber, $run_param=array()) {
+        $caller_id = null;
+        $run_param['API_Key'];
+        $thenumber = urlencode($thenumber);
+        $this->DebugPrint("Searching Telnyx ... ");
+        $url = "https://api.telnyx.com/v2/number_lookup/+1".$thenumber."?type=caller-name";
+
+        $headers = array(
+            "Content-type: application/json",
+            "Accept: application/json",
+            "Authorization: Bearer ".$run_param['API_Key']
+        );
+
+        $ch = curl_init();
+        curl_setopt ($ch, CURLOPT_URL, $url);
+        curl_setopt ($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+        $value = (curl_exec($ch));
+        curl_close($ch);
+
+        $result = json_decode($value,true);
+        $caller_id = ($result["data"]["caller_name"]["caller_name"]);
+
+        return $caller_id;
+    }
+}
