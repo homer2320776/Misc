@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Uses Telnyx APIv2
+ * place files in /var/www/html/admin/modules/superfecta/sources
+ */
 class Telnyx extends superfecta_base {
 
     public $description = "Telnyx Phone number lookup API allows users to lookup phone number data.";
