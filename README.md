@@ -7,3 +7,6 @@
 *Clicks "Show More" until all pages are loaded, then clicks each coupon to load*
 - [Newegg URL Shortner](https://raw.githubusercontent.com/homer2320776/Misc/master/bookmarklets/Newegg_Shortner_Bookmarklet.js) - 
 *Removes unneeded details, uses Item# to link*
+
+## FreePBX ##
+- CIDSuperfecta module for Telnyx
